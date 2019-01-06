@@ -1,7 +1,7 @@
 {% set name = "vine" %}
-{% set version = "1.1.4" %}
-{% set sha256 = "52116d59bc45392af9fdd3b75ed98ae48a93e822cee21e5fda249105c59a7a72" %}
-{% set build = 1 %}
+{% set version = "1.2.0" %}
+{% set sha256 = "ee4813e915d0e1a54e5c1963fde0855337f82655678540a6bc5996bca4165f76" %}
+{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
