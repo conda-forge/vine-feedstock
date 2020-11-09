@@ -1,13 +1,17 @@
 About vine
 ==========
 
-Home: http://github.com/celery/vine
+Home: https://pypi.org/project/vine/
 
-Package license: BSD 3-clause
+Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/vine-feedstock/blob/master/LICENSE.txt)
 
 Summary: Python promises
+
+Development: https://github.com/celery/vine
+
+Documentation: https://vine.readthedocs.io/
 
 This is a special implementation of promises in that it can be used both
 for promise of a value and lazy evaluation. The biggest upside for this
@@ -120,6 +124,7 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@anthchirp](https://github.com/anthchirp/)
 * [@frol](https://github.com/frol/)
 * [@pmlandwehr](https://github.com/pmlandwehr/)
 
