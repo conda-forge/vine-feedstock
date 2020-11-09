@@ -1,50 +1,50 @@
 {% set name = "vine" %}
 {% set version = "5.0.0" %}
-{% set sha256 = "7d3b1624a953da82ef63462013bbd271d3eb75751489f9807598e8f340bd637e" %}
-{% set build = 0 %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/vine-{{ version }}.tar.gz
+  sha256: 7d3b1624a953da82ef63462013bbd271d3eb75751489f9807598e8f340bd637e
 
 build:
+  number: 1
   noarch: python
-  number: {{ build }}
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - setuptools
   run:
-    - python
+    - python >=3.6
 
 test:
   imports:
     - vine
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
-  home: http://github.com/celery/vine
-  license: BSD 3-clause
-  license_family: BSD
+  home: https://pypi.org/project/vine/
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: Python promises
-
   description: |
     This is a special implementation of promises in that it can be used both
     for promise of a value and lazy evaluation. The biggest upside for this
     is that everything in a promise can also be a promise, e.g. filters,
     callbacks and errbacks can all be promises.
-  doc_url: http://vine.readthedocs.io/
+  doc_url: https://vine.readthedocs.io/
   dev_url: https://github.com/celery/vine
 
 extra:
   recipe-maintainers:
+    - anthchirp
     - frol
     - pmlandwehr
